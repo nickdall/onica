@@ -34,4 +34,8 @@ resource "aws_security_group" "instance" {
       protocol = "tcp"
       cidr_blocks = ["${var.vpc_cidr}"]
   }
+
+  lifecycle {
+    create_before_destroy = true
+  }
 }
