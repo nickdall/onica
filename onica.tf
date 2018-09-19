@@ -12,7 +12,7 @@ resource "aws_launch_configuration" "webserver" {
 
  connection {
     user = "ubuntu"
-    private_key = "${file("~/.ssh/id_rsa")}"
+    private_key = "${file("${path.module}/id_rsa")}"
   }
 
   user_data = "${data.template_file.user_data.rendered}"
