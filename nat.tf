@@ -60,7 +60,7 @@ resource "aws_security_group" "nat" {
 }
 
 resource "aws_instance" "nat" {
-    ami = "ami-8c8761ef" # this is a special ami preconfigured to do NAT
+    ami = "ami-8c8761ef" 
     availability_zone = "us-west-1b"
     instance_type = "m1.small"
     key_name = "nick_deployer"
