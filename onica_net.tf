@@ -1,3 +1,14 @@
+resource "aws_security_group" "elb" {
+  name = "onica-elb"
+
+  ingress {
+    from_port = 80
+    to_port = 80
+    protocol = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+}
+
 resource "aws_security_group" "instance" {
   name = "onica-security-group"
 
